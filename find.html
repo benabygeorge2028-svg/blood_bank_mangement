@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Donor | Blood Bank</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f4f6f8; }
+    .navbar { background-color: #dc3545; }
+    .navbar-brand { font-weight: 600; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('blood.jpg') center/cover no-repeat;
+      color: white; padding: 80px 0; text-align: center;
+    }
+    .card { border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    footer { background-color: #dc3545; color: white; padding: 15px; text-align: center; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">🩸 Blood Bank</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link active" href="find.html">Find Donor</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Find a Blood Donor</h1>
+    <p class="lead">Search for donors by blood group and city.</p>
+  </div>
+</section>
+
+<!-- Search Form -->
+<div class="container my-5">
+  <div class="card p-4">
+    <h3 class="text-center mb-4">🔍 Search Donors</h3>
+    <form action="find_process.php" method="POST">
+      <div class="mb-3">
+        <label class="form-label">Select Blood Group</label>
+        <select name="blood_group" class="form-select" required>
+          <option value="">Choose...</option>
+          <option>A+</option><option>A-</option>
+          <option>B+</option><option>B-</option>
+          <option>O+</option><option>O-</option>
+          <option>AB+</option><option>AB-</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Enter City / Location</label>
+        <input type="text" name="location" class="form-control" placeholder="e.g. Kottayam" required>
+      </div>
+      <button type="submit" class="btn btn-danger w-100">Search Donors</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Blood Bank Management System | Designed with ❤️ for saving lives</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blood Bank Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: #333; }
+
+    /* Navbar */
+    .navbar {
+      background: #2c3e50;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar h2 { margin: 0; font-weight: 600; }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .navbar a:hover { color: #e74c3c; }
+
+    /* Hero Section */
+    .hero {
+      height: 75vh;
+      background: linear-gradient(rgba(44,62,80,0.65), rgba(44,62,80,0.65)),
+            url('blood.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    .hero button {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 60px auto;
+      max-width: 1100px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+      transition: 0.3s ease;
+    }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+    .card h3 { margin: 15px 0; color: #2c3e50; font-weight: 600; }
+    .card p { font-size: 14px; color: #555; margin-bottom: 15px; }
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: #e74c3c;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .card a:hover { background: #c0392b; }
+
+    /* Footer */
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>🩸 Blood Bank</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="find.html">Find Donor</a>
+      <a href="login.html">Admin</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <h1>Donate Blood, Save Lives</h1>
+      <p>Your small act of kindness can save multiple lives. Join our mission today.</p>
+      <button onclick="window.location.href='register.html'">Become a Donor</button>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="features">
+    <div class="card">
+      <h3>📝 Register</h3>
+      <p>Sign up as a donor and help save lives by being available when needed.</p>
+      <a href="register.html">Register Now</a>
+    </div>
+    <div class="card">
+      <h3>🔎 Find Donors</h3>
+      <p>Quickly search our database to locate donors by blood group and location.</p>
+      <a href="find.html">Search</a>
+    </div>
+    <div class="card">
+      <h3>🔐 Admin</h3>
+      <p>Secure access for administrators to manage donor data and requests.</p>
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2025 Blood Bank Management System | Designed with ❤️ for saving lives</p>
+  </div>
+</body>
+</html>
+
